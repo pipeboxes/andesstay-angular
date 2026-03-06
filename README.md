@@ -1,59 +1,167 @@
-# Andesstay
+# AndesStay 🏨
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
+Aplicación web desarrollada con **Angular** que simula una plataforma de búsqueda de hoteles similar a Airbnb o Booking.
+El proyecto muestra una lista de hoteles, permite navegar a la vista de detalle y está estructurado con componentes reutilizables y arquitectura modular.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologías utilizadas
+
+* **Angular (Standalone Components)**
+* **TypeScript**
+* **SCSS**
+* **Angular Router**
+* **RxJS**
+* **HTML5**
+
+---
+
+## 📂 Estructura del proyecto
+
+```
+src/app
+│
+├── components
+│   ├── navbar
+│   └── hotel-card
+│
+├── pages
+│   ├── home
+│   ├── hotel-detail
+│   └── favorites
+│
+├── services
+│   ├── hotels.ts
+│   └── favorites.ts
+│
+├── models
+│
+├── app.ts
+├── app.routes.ts
+└── app.config.ts
+```
+
+### Descripción
+
+**components/**
+
+* Componentes reutilizables de la aplicación.
+
+**pages/**
+
+* Páginas principales que se renderizan mediante rutas.
+
+**services/**
+
+* Manejo de datos y lógica de negocio.
+
+**models/**
+
+* Interfaces y tipos de datos.
+
+---
+
+## 🧠 Arquitectura
+
+La aplicación sigue una arquitectura basada en:
+
+```
+Services → Components → Views
+```
+
+Ejemplo de flujo:
+
+```
+HotelsService
+      ↓
+Home Component
+      ↓
+HotelCard Component
+      ↓
+Renderizado en la vista
+```
+
+---
+
+## 🌐 Rutas de la aplicación
+
+| Ruta          | Descripción                |
+| ------------- | -------------------------- |
+| `/`           | Lista de hoteles           |
+| `/hotels/:id` | Detalle del hotel          |
+| `/favorites`  | Lista de hoteles favoritos |
+
+---
+
+## ⚙️ Instalación del proyecto
+
+Clonar repositorio:
+
+```bash
+git clone https://github.com/TU-USUARIO/andesstay-angular.git
+```
+
+Entrar al proyecto:
+
+```bash
+cd andesstay-angular
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Ejecutar el servidor de desarrollo:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abrir en el navegador:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## ✨ Funcionalidades actuales
 
-## Building
+* Listado de hoteles
+* Tarjetas de hotel reutilizables
+* Navegación con Angular Router
+* Página de detalle de hotel
+* Navbar y footer
+* Arquitectura modular escalable
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🔮 Próximas mejoras
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+* Sistema de **favoritos**
+* **Persistencia con LocalStorage**
+* **Imágenes reales de hoteles**
+* **Animaciones**
+* **Filtros de búsqueda**
+* **Diseño responsive completo**
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 👨‍💻 Autor
 
-```bash
-ng test
-```
+**Felipe Cajas Maureira**
 
-## Running end-to-end tests
+* Full-Stack Developer (en formación)
+* Enfermero universitario
+* Interés en desarrollo web y aplicaciones modernas
 
-For end-to-end (e2e) testing, run:
+LinkedIn: *(https://www.linkedin.com/in/felipe-ignacio-cajas-maureira-95a6a1307/)*
+GitHub: *(pipeboxes)*
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📄 Licencia
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este proyecto fue desarrollado con fines educativos y de portafolio.
