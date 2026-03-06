@@ -1,0 +1,9 @@
+<a class="card" [routerLink]="['/hotels', hotel.id]">
+  <div class="img"></div>
+
+  <div class="body">
+    <h3>{{ hotel.name }}</h3>
+    <p class="meta">{{ hotel.city }}, {{ hotel.country }} • ⭐ {{ hotel.rating }}</p>
+    <p class="price">${{ hotel.pricePerNight }} / noche</p>
+  </div>
+</a>
